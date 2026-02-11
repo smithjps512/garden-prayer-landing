@@ -9,7 +9,7 @@ interface YouTubeEmbedProps {
 export default function YouTubeEmbed({
   videoId,
   title = "Video",
-  placeholder = "Replace with video URL",
+  placeholder = "https://youtu.be/-11W93ufc7k",
 }: YouTubeEmbedProps) {
   if (!videoId) {
     return (
