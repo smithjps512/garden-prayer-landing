@@ -91,7 +91,7 @@ export default function VaqueroHomesPage() {
             >
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
                 <Image
-                  src="/images/VaqueroHomesScreenShot.jpg"
+                  src="/images/VaqueroHomesScreenShot.png"
                   alt="Vaquero Homes Platform"
                   fill
                   className="object-cover"

@@ -225,7 +225,7 @@ export default function GameViewPage() {
             <ScrollReveal>
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
                 <Image
-                  src="/images/GameViewHero.jpg"
+                  src="/images/GameViewHero.png"
                   alt="Game View Studio Interface"
                   fill
                   className="object-cover"
@@ -236,7 +236,7 @@ export default function GameViewPage() {
             <ScrollReveal delay={0.1}>
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
                 <Image
-                  src="/images/GameViewHero.jpg"
+                  src="/images/GameViewHero.png"
                   alt="Game View 3D Reconstruction Output"
                   fill
                   className="object-cover"

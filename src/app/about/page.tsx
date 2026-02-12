@@ -56,7 +56,7 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/[0.06]">
                 <Image
-                  src="/images/PeacefulGardenImage.jpg"
+                  src="/images/PeacefulGardenImage.png"
                   alt="Peaceful Garden"
                   fill
                   className="object-cover"

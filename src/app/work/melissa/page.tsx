@@ -121,7 +121,7 @@ export default function MelissaPage() {
             >
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
                 <Image
-                  src="/images/MelissaForEducatorsScreenShot.jpg"
+                  src="/images/MelissaForEducatorsScreenshot.png"
                   alt="Melissa for Educators Platform Screenshot"
                   fill
                   className="object-cover"

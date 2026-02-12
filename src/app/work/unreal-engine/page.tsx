@@ -92,7 +92,7 @@ export default function UnrealEnginePage() {
             >
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
                 <Image
-                  src="/images/UnrealEngineHero.jpg"
+                  src="/images/UnrealEngineHero.png"
                   alt="Unreal Engine Project"
                   fill
                   className="object-cover"
@@ -191,7 +191,7 @@ export default function UnrealEnginePage() {
           <ScrollReveal>
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
               <Image
-                src="/images/UnrealEngineProjectScreenShot.jpg"
+                src="/images/UnrealEngineProjectScreenShot.PNG"
                 alt="Unreal Engine Project Screenshot"
                 fill
                 className="object-cover"
