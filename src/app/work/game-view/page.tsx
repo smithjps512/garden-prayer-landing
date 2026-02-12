@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import ScrollReveal from "@/components/ScrollReveal";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function GameViewPage() {
   return (
@@ -99,9 +99,8 @@ export default function GameViewPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              {/* YOUTUBE VIDEO EMBED: Replace with Game View demo video URL */}
               <YouTubeEmbed
-                placeholder="Game View Demo Video — Replace with YouTube video ID"
+                videoId="-11W93ufc7k"
                 title="Game View Demo"
               />
             </motion.div>
@@ -193,17 +192,15 @@ export default function GameViewPage() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* YOUTUBE VIDEO EMBED: Replace with Game View video 1 URL */}
             <ScrollReveal delay={0}>
               <YouTubeEmbed
-                placeholder="Game View Video 1 — Replace with YouTube video ID"
+                videoId="535OJyxXcg8"
                 title="Game View Demo 1"
               />
             </ScrollReveal>
-            {/* YOUTUBE VIDEO EMBED: Replace with Game View video 2 URL */}
             <ScrollReveal delay={0.1}>
               <YouTubeEmbed
-                placeholder="Game View Video 2 — Replace with YouTube video ID"
+                videoId="c3Jokjy71gc"
                 title="Game View Demo 2"
               />
             </ScrollReveal>
@@ -226,16 +223,26 @@ export default function GameViewPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ScrollReveal>
-              <ImagePlaceholder
-                label="Game View Studio Interface — Replace with screenshot"
-                gradient="from-blue-900/50 to-midnight-50"
-              />
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
+                <Image
+                  src="/images/GameViewHero.jpg"
+                  alt="Game View Studio Interface"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <ImagePlaceholder
-                label="3D Reconstruction Output — Replace with screenshot"
-                gradient="from-indigo-900/50 to-midnight-50"
-              />
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
+                <Image
+                  src="/images/GameViewHero.jpg"
+                  alt="Game View 3D Reconstruction Output"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </ScrollReveal>
           </div>
         </div>

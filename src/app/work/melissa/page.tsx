@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function MelissaPage() {
   return (
@@ -119,10 +119,15 @@ export default function MelissaPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <ImagePlaceholder
-                label="Melissa Platform Screenshot — Replace with app screenshot"
-                gradient="from-rose-900/50 to-midnight-50"
-              />
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
+                <Image
+                  src="/images/MelissaForEducatorsScreenShot.jpg"
+                  alt="Melissa for Educators Platform Screenshot"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </motion.div>
           </div>
         </div>

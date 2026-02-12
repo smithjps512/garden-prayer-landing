@@ -2,9 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
-import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export default function UnrealEnginePage() {
   return (
@@ -91,11 +90,15 @@ export default function UnrealEnginePage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              {/* IMAGE PLACEHOLDER: Replace with Unreal Engine project hero image */}
-              <ImagePlaceholder
-                label="Unreal Engine Project Hero — Replace with screenshot or render"
-                gradient="from-emerald-900/50 to-midnight-50"
-              />
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
+                <Image
+                  src="/images/UnrealEngineHero.jpg"
+                  alt="Unreal Engine Project"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -184,41 +187,18 @@ export default function UnrealEnginePage() {
             </div>
           </ScrollReveal>
 
-          {/* Video placeholder */}
+          {/* Screenshot */}
           <ScrollReveal>
-            <div className="mb-8">
-              {/* YOUTUBE VIDEO EMBED: Replace with Unreal Engine project demo video URL */}
-              <YouTubeEmbed
-                placeholder="Unreal Engine Project Demo — Replace with YouTube video ID"
-                title="Unreal Engine Project Demo"
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
+              <Image
+                src="/images/UnrealEngineProjectScreenShot.jpg"
+                alt="Unreal Engine Project Screenshot"
+                fill
+                className="object-cover"
+                sizes="100vw"
               />
             </div>
           </ScrollReveal>
-
-          {/* Screenshot grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ScrollReveal>
-              <ImagePlaceholder
-                label="Environment Render 1 — Replace with screenshot"
-                gradient="from-emerald-900/30 to-midnight-50"
-                aspectRatio="aspect-square"
-              />
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <ImagePlaceholder
-                label="Environment Render 2 — Replace with screenshot"
-                gradient="from-teal-900/30 to-midnight-50"
-                aspectRatio="aspect-square"
-              />
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <ImagePlaceholder
-                label="Environment Render 3 — Replace with screenshot"
-                gradient="from-cyan-900/30 to-midnight-50"
-                aspectRatio="aspect-square"
-              />
-            </ScrollReveal>
-          </div>
         </div>
       </section>
     </>

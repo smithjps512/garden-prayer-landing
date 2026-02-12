@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function VaqueroHomesPage() {
   return (
@@ -89,11 +89,15 @@ export default function VaqueroHomesPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              {/* IMAGE PLACEHOLDER: Replace with Vaquero Homes hero image/screenshot */}
-              <ImagePlaceholder
-                label="Vaquero Homes Platform — Replace with screenshot"
-                gradient="from-amber-900/50 to-midnight-50"
-              />
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/[0.06]">
+                <Image
+                  src="/images/VaqueroHomesScreenShot.jpg"
+                  alt="Vaquero Homes Platform"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </motion.div>
           </div>
         </div>

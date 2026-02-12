@@ -55,14 +55,24 @@ export default function HomePage() {
             className="mt-8 font-body text-lg md:text-xl text-cream/50 max-w-2xl mx-auto leading-relaxed"
           >
             Platforms that teach, entertain, and transform — guided by prayer
-            and 20+ years of experience building for Disney, NASCAR, NFL,
-            Samsung, and Live Nation.
+            and 20+ years of experience building for Disney, NFL, Samsung,
+            Procter and Gamble, Live Nation, and more.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mt-4 font-body text-base md:text-lg text-cream/40 max-w-2xl mx-auto leading-relaxed"
+          >
+            From AI-powered classrooms to revolutionary 3D experiences&mdash; we
+            create tools and content that make expertise accessible to everyone.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a href="#work" className="btn-primary">

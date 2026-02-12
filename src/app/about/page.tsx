@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -47,32 +48,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== FOUNDER ===== */}
+      {/* ===== WHO WE ARE ===== */}
       <section className="py-24 md:py-32 section-padding">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Photo placeholder */}
+            {/* Image */}
             <ScrollReveal>
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-accent/10 to-midnight-50 border border-white/[0.06]">
-                {/* IMAGE PLACEHOLDER: Founder photo — Replace with James Smith portrait */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-cream/20">
-                  <svg
-                    className="w-16 h-16 mb-3"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                  <p className="text-xs font-body">
-                    Founder Photo — Replace with portrait
-                  </p>
-                </div>
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/[0.06]">
+                <Image
+                  src="/images/PeacefulGardenImage.jpg"
+                  alt="Peaceful Garden"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </ScrollReveal>
 
@@ -80,30 +69,37 @@ export default function AboutPage() {
             <ScrollReveal delay={0.2}>
               <div>
                 <span className="accent-line block mb-6" />
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-cream mb-2">
-                  James Smith
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-cream mb-6">
+                  Who We Are
                 </h2>
-                <p className="text-accent text-sm font-body font-medium mb-6">
-                  Founder & CEO — Husband, Mentor, Believer
-                </p>
 
                 <div className="space-y-4 text-cream/60 font-body leading-relaxed">
                   <p>
-                    With over 20 years building products and platforms for
-                    Disney, NASCAR, NFL, Samsung, and Live Nation, James brings a
+                    Garden Prayer Publishing is a group of talented creators,
+                    technologists, and problem solving innovators who believe in
+                    building for a purpose. We genuinely care that our work
+                    impacts lives in a meaningful and useful way, and that
+                    humanity benefits from it.
+                  </p>
+                  <p>
+                    With over 20 years building products and experiences for the
+                    largest companies in the world such as Disney, NASCAR, NFL,
+                    Samsung, Procter and Gamble, and Live Nation our teams have a
                     rare combination of enterprise technology expertise and
                     faith-guided leadership to every project.
                   </p>
                   <p>
-                    A Wharton MBA graduate, James has spent his career at the
-                    intersection of technology and human experience — from
-                    pioneering live entertainment streaming platforms to building
-                    AI-powered education tools.
+                    Our teams have also started, launched, and succeeded in
+                    technical and experiential businesses that have brought brand
+                    names to our customers communities and homes. We have seen
+                    first hand the impact that building quality products that do
+                    good can have, and our purpose is to continue to impact lives
+                    through meaningful work.
                   </p>
                   <p>
-                    Rooted in a Texas family of educators, his work has always
-                    been about one thing: using technology to amplify human
-                    capability, never to replace human connection.
+                    We are big believers in innovation! And we are bigger
+                    believers in people and God&apos;s purpose for them, and we
+                    strive to marry innovation with purpose in everything we do.
                   </p>
                 </div>
 

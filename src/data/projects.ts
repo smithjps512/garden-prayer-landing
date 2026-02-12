@@ -11,6 +11,7 @@ export interface Project {
   era?: string;
   gradient: string;
   icon: string;
+  heroImage?: string;
 }
 
 export const currentProjects: Project[] = [
@@ -25,6 +26,7 @@ export const currentProjects: Project[] = [
     entity: "Game View Sports & Entertainment Corporation",
     gradient: "from-blue-600 via-indigo-600 to-violet-700",
     icon: "🎮",
+    heroImage: "/images/GameViewHero.jpg",
   },
   {
     slug: "melissa",
@@ -37,6 +39,7 @@ export const currentProjects: Project[] = [
     url: "https://melissaforeducators.ai",
     gradient: "from-rose-600 via-red-600 to-orange-600",
     icon: "📚",
+    heroImage: "/images/MelissaAIHero.jpg",
   },
   {
     slug: "vaquero-homes",
@@ -49,6 +52,7 @@ export const currentProjects: Project[] = [
     statusLabel: "Launching Soon",
     gradient: "from-amber-600 via-orange-600 to-red-600",
     icon: "🏠",
+    heroImage: "/images/VaqueroHomesHero.jpg",
   },
   {
     slug: "unreal-engine",
@@ -60,6 +64,7 @@ export const currentProjects: Project[] = [
     status: "Active",
     gradient: "from-emerald-600 via-teal-600 to-cyan-600",
     icon: "🌐",
+    heroImage: "/images/UnrealEngineHero.jpg",
   },
 ];
 
@@ -76,6 +81,7 @@ export const legacyProjects: Project[] = [
     era: "~2013",
     gradient: "from-purple-600 via-fuchsia-600 to-pink-600",
     icon: "🎬",
+    heroImage: "/images/iGoHDHero.jpg",
   },
   {
     slug: "domain-u",
@@ -89,6 +95,7 @@ export const legacyProjects: Project[] = [
     era: "2017–2019",
     gradient: "from-sky-600 via-blue-600 to-indigo-600",
     icon: "🎓",
+    heroImage: "/images/LumineoHero.jpg",
   },
 ];
 

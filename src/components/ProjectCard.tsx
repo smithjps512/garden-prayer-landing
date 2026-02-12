@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Project } from "@/data/projects";
 
@@ -31,16 +32,26 @@ export default function ProjectCard({
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
 
-          {/* Icon/visual center piece */}
-          <div className="absolute inset-0 flex items-center justify-center z-0">
-            <span
-              className={`${
-                large ? "text-8xl" : "text-6xl"
-              } opacity-20 group-hover:opacity-30 transition-opacity duration-500 group-hover:scale-110 transform`}
-            >
-              {project.icon}
-            </span>
-          </div>
+          {/* Hero image or icon fallback */}
+          {project.heroImage ? (
+            <Image
+              src={project.heroImage}
+              alt={project.name}
+              fill
+              className="object-cover z-0 group-hover:scale-105 transition-transform duration-700"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center z-0">
+              <span
+                className={`${
+                  large ? "text-8xl" : "text-6xl"
+                } opacity-20 group-hover:opacity-30 transition-opacity duration-500 group-hover:scale-110 transform`}
+              >
+                {project.icon}
+              </span>
+            </div>
+          )}
 
           {/* Content overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-20">
