@@ -39,7 +39,7 @@ export const currentProjects: Project[] = [
     url: "https://melissaforeducators.ai",
     gradient: "from-rose-600 via-red-600 to-orange-600",
     icon: "📚",
-    heroImage: "/images/MelissaAIHero",
+    heroImage: "/images/MelissaEducatorHero.png",
   },
   {
     slug: "vaquero-homes",
