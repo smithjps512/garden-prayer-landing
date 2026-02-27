@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+.page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #F5F2EB;
+  color: #2C2C2C;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* Header */
+.header {
+  background: #1E3A2F;
+  border-bottom: 4px solid #D4A843;
+  padding: 2.5rem 1.5rem;
+}
+
+.headerContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #D4A843;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.headerTitle {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 2.25rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.effective {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #8FAF9E;
+}
+
+/* Main content */
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.page h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: #1E3A2F;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #E5E0D8;
+}
+
+.page h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2D6A4F;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page p {
+  margin-bottom: 1rem;
+  color: #5A5A5A;
+}
+
+.page ul {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.page li {
+  margin-bottom: 0.5rem;
+  color: #5A5A5A;
+}
+
+.page li strong {
+  color: #2C2C2C;
+}
+
+.page a {
+  color: #2D6A4F;
+  text-decoration: underline;
+  text-decoration-color: #D4A843;
+  text-underline-offset: 2px;
+}
+
+.page a:hover {
+  color: #1E3A2F;
+}
+
+.highlightBox {
+  background: #FFFFFF;
+  border-left: 4px solid #D4A843;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.highlightBox p {
+  margin-bottom: 0;
+  color: #2C2C2C;
+  font-size: 0.95rem;
+}
+
+/* Table */
+.page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.page th {
+  background: #1E3A2F;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.page td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E5E0D8;
+  color: #5A5A5A;
+  vertical-align: top;
+}
+
+.page tr:nth-child(even) td {
+  background: rgba(245, 242, 235, 0.5);
+}
+
+/* Footer */
+.footer {
+  background: #1E3A2F;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.footer p {
+  color: #8FAF9E;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer a {
+  color: #D4A843;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .headerTitle {
+    font-size: 1.75rem;
+  }
+
+  .page h2 {
+    font-size: 1.25rem;
+  }
+
+  .page table {
+    font-size: 0.8rem;
+  }
+
+  .page th,
+  .page td {
+    padding: 0.5rem 0.75rem;
+  }
+}

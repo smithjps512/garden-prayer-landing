@@ -66,9 +66,17 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Garden Prayer Publishing LLC. All
             rights reserved.
           </p>
-          <p className="text-cream/30 text-xs italic">
-            Built with faith in Texas.
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="text-cream/30 text-xs hover:text-accent transition-colors duration-300"
+            >
+              Privacy Policy
+            </Link>
+            <p className="text-cream/30 text-xs italic">
+              Built with faith in Texas.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
