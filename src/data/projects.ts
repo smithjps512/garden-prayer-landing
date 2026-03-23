@@ -65,6 +65,7 @@ export const currentProjects: Project[] = [
     url: "https://veraflow.ai",
     gradient: "from-sky-600 via-blue-700 to-indigo-700",
     icon: "🏭",
+    heroImage: "/images/VeraflowHero.png",
   },
   {
     slug: "unreal-engine",
