@@ -33,6 +33,9 @@ export default function Footer() {
                 { href: "/about", label: "About" },
                 { href: "/work/game-view", label: "Game View" },
                 { href: "/work/melissa", label: "Melissa for Educators" },
+                { href: "/work/veraflow", label: "Veraflow" },
+                { href: "/work/vaquero-homes", label: "Vaquero Homes" },
+                { href: "/#books", label: "Books" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

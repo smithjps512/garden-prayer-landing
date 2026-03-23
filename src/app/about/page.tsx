@@ -116,6 +116,99 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ===== INTELLECTUAL PROPERTY ===== */}
+      <section className="py-24 md:py-32 section-padding relative">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,169,98,0.04),transparent_70%)]" />
+
+        <div className="relative max-w-4xl mx-auto">
+          <SectionHeading
+            label="Innovation"
+            title="Intellectual Property & Innovation"
+          />
+
+          <ScrollReveal>
+            <p className="text-cream/60 font-body leading-relaxed text-center max-w-3xl mx-auto mb-10 text-lg">
+              Garden Prayer Publishing holds two patents in immersive technology
+              and AI:
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <ScrollReveal delay={0.1}>
+              <div className="glass-card p-8 h-full">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent mb-5">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-display text-lg font-bold text-cream mb-1">
+                  GameView.302
+                </h3>
+                <p className="text-accent text-xs font-body font-semibold tracking-wider uppercase mb-3">
+                  Conversational AI Specification Generation (&ldquo;Spark&rdquo;)
+                </p>
+                <p className="font-body text-cream/50 text-sm leading-relaxed">
+                  A system enabling non-technical creators to generate
+                  photorealistic virtual scene specifications through natural
+                  language conversation.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="glass-card p-8 h-full">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent mb-5">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-display text-lg font-bold text-cream mb-1">
+                  GameView.303
+                </h3>
+                <p className="text-accent text-xs font-body font-semibold tracking-wider uppercase mb-3">
+                  Multi-Camera Volumetric Processing Pipeline
+                </p>
+                <p className="font-body text-cream/50 text-sm leading-relaxed">
+                  A patented method for processing synchronized multi-camera
+                  footage to reconstruct photorealistic 3D/4D environments from
+                  standard 2D video.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.3}>
+            <blockquote className="mt-10 text-center pl-0">
+              <p className="font-display text-lg text-cream/50 italic max-w-2xl mx-auto">
+                These patents reflect our core belief: the most powerful
+                technology is the kind that puts creative control in the hands of
+                people who have never written a line of code.
+              </p>
+            </blockquote>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ===== COMPANY STORY ===== */}
       <section className="py-24 md:py-32 section-padding relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,169,98,0.04),transparent_70%)]" />
@@ -240,6 +333,19 @@ export default function AboutPage() {
                     strokeLinejoin="round"
                     strokeWidth={1.5}
                     d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                ),
+              },
+              {
+                title: "Enterprise Program Management Tooling",
+                description:
+                  "Custom-built ERP visualization and program management dashboards for precision manufacturing and industrial clients. Our team brings experience across defense, aerospace, consumer packaged goods, and automotive sectors — bridging legacy enterprise systems (Oracle, SAP) with modern analytics interfaces delivered as secure desktop applications on government-compliant cloud infrastructure.",
+                icon: (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 ),
               },

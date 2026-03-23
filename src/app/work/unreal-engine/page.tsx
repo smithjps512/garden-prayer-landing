@@ -56,7 +56,7 @@ export default function UnrealEnginePage() {
                   Active
                 </span>
                 <span className="text-[11px] font-body text-cream/40 tracking-wider uppercase">
-                  3D Visualization / Game Engine
+                  3D Visualization / Gaussian Splatting
                 </span>
               </motion.div>
 
@@ -66,10 +66,20 @@ export default function UnrealEnginePage() {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-[0.95] mb-6"
               >
-                Unreal Engine
+                Spatial Planning
                 <br />
-                <span className="gradient-text">Project</span>
+                <span className="gradient-text">Studio</span>
               </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.15 }}
+                className="font-display text-xl text-cream/70 mb-4"
+              >
+                Warehouse &amp; Facility Visualization Powered by Gaussian
+                Splatting in Unreal Engine 5
+              </motion.p>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -77,10 +87,12 @@ export default function UnrealEnginePage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="font-body text-lg text-cream/60 leading-relaxed"
               >
-                A standalone project leveraging Unreal Engine 5 for advanced 3D
-                visualization and immersive environment rendering. Pushing the
-                boundaries of real-time 3D rendering to create photorealistic
-                environments and experiences.
+                Next-generation spatial planning using Unreal Engine 5 and the
+                LCC4Unreal plugin for real-time Gaussian Splat rendering. Enables
+                facility operators to walk virtual representations of real-world
+                spaces &mdash; warehouses, arenas, production floors &mdash; for
+                planning, training, and design review. Built on real-world scan
+                data processed through COLMAP/GLOMAP pipelines.
               </motion.p>
             </div>
 

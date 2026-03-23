@@ -63,7 +63,7 @@ export default function BookCard({
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 text-accent text-sm font-body font-semibold hover:text-accent-light transition-colors duration-300 group/link"
           >
-            <span>Available on Amazon</span>
+            <span>Order on Amazon</span>
             <svg
               className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform duration-300"
               fill="none"
