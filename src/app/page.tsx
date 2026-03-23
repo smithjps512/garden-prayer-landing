@@ -65,8 +65,9 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="mt-4 font-body text-base md:text-lg text-cream/40 max-w-2xl mx-auto leading-relaxed"
           >
-            From AI-powered classrooms to revolutionary 3D experiences&mdash; we
-            create tools and content that make expertise accessible to everyone.
+            From AI-powered classrooms to manufacturing floors to revolutionary
+            3D experiences&mdash; we create tools and content that make expertise
+            accessible to everyone.
           </motion.p>
 
           <motion.div
