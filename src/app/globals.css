@@ -92,3 +92,37 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(201, 169, 98, 0.5);
 }
+
+/* TrailRider uses one sans typeface throughout, so its headings opt out of
+   the serif display font the rest of the site uses. */
+.trailrider-app h1,
+.trailrider-app h2,
+.trailrider-app h3,
+.trailrider-app h4,
+.trailrider-app h5,
+.trailrider-app h6 {
+  font-family: var(--font-body);
+  letter-spacing: -0.02em;
+}
+
+/* TrailRider — dark styling for Leaflet map tooltips.
+   Scoped under .leaflet-container so these win over Leaflet's own stylesheet,
+   which the map component imports after this file. */
+.leaflet-container .leaflet-tooltip {
+  background: rgba(9, 9, 11, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f4f4f5;
+  font-family: var(--font-body);
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.leaflet-container .leaflet-tooltip-right::before {
+  border-right-color: rgba(255, 255, 255, 0.15);
+}
+
+.leaflet-container {
+  font-family: var(--font-body);
+}
