@@ -18,10 +18,10 @@ export default function TrailRiderNav() {
 
   return (
     <header className="sticky top-0 z-[1000] border-b border-white/10 bg-zinc-950/85 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center gap-1 px-4 py-3 sm:gap-2 sm:px-6">
+      <nav className="mx-auto flex max-w-6xl items-center gap-1 px-3 py-3 sm:gap-2 sm:px-6">
         <Link
           href="/trailrider"
-          className="mr-2 flex shrink-0 items-center gap-2 font-semibold tracking-tight text-white"
+          className="mr-1 flex shrink-0 items-center gap-2 font-semibold tracking-tight text-white sm:mr-2"
         >
           <span className="grid h-7 w-7 place-items-center rounded-md bg-emerald-500 text-sm text-zinc-950">
             {"▲"}
@@ -36,7 +36,7 @@ export default function TrailRiderNav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`whitespace-nowrap rounded-lg px-3 py-1.5 text-sm transition-colors ${
+                className={`whitespace-nowrap rounded-lg px-2 py-1.5 text-[13px] transition-colors sm:px-3 sm:text-sm ${
                   active
                     ? "bg-white/10 text-white"
                     : "text-zinc-400 hover:bg-white/5 hover:text-white"
@@ -53,7 +53,7 @@ export default function TrailRiderNav() {
             <span className="hidden text-sm text-zinc-400 sm:inline">{user.name}</span>
             <button
               onClick={() => update(logOut)}
-              className="rounded-lg border border-white/15 px-3 py-1.5 text-sm text-zinc-300 transition-colors hover:bg-white/5 hover:text-white"
+              className="rounded-lg border border-white/15 px-2.5 py-1.5 text-[13px] text-zinc-300 transition-colors hover:bg-white/5 hover:text-white sm:px-3 sm:text-sm"
             >
               Log out
             </button>

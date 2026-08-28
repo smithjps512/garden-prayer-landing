@@ -2,7 +2,7 @@
 
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -13,6 +13,9 @@ import {
 } from "react-leaflet";
 import type { Trail } from "@/lib/trailrider/types";
 import { DIFFICULTY } from "./DifficultyBadge";
+
+/** Below this width there is no room for ten labels at once. */
+const WIDE_ENOUGH_FOR_LABELS = 520;
 
 /**
  * Leaflet's default marker images break under bundlers, so every pin is a
@@ -61,6 +64,74 @@ function ViewController({
   }, [boundsKey, map]);
 
   return null;
+}
+
+/**
+ * The pins and their labels.
+ *
+ * The map user story asks for the length to appear over the trail name, which
+ * works nicely on a laptop. On a phone ten permanent labels cover the map and
+ * run off the edge, so there labels belong to whichever trail you tapped —
+ * and the list under the map still shows every name and length.
+ */
+function TrailMarkers({
+  trails,
+  selectedSlug,
+  onSelect,
+}: {
+  trails: Trail[];
+  selectedSlug: string | null;
+  onSelect: (slug: string) => void;
+}) {
+  const map = useMap();
+  const [wide, setWide] = useState(true);
+  const [centerLng, setCenterLng] = useState(() => map.getCenter().lng);
+
+  useEffect(() => {
+    const sync = () => {
+      setWide(map.getSize().x >= WIDE_ENOUGH_FOR_LABELS);
+      setCenterLng(map.getCenter().lng);
+    };
+    sync();
+    map.on("resize moveend zoomend", sync);
+    return () => {
+      map.off("resize moveend zoomend", sync);
+    };
+  }, [map]);
+
+  return (
+    <>
+      {trails.map((trail) => {
+        const isSelected = trail.slug === selectedSlug;
+        const alwaysOn = wide || isSelected;
+        // Labels on the eastern half point inward so they stay on the map.
+        const east = trail.lng > centerLng;
+
+        return (
+          <Marker
+            key={trail.id}
+            position={[trail.lat, trail.lng]}
+            icon={pinFor(trail, isSelected)}
+            eventHandlers={{ click: () => onSelect(trail.slug) }}
+          >
+            <Tooltip
+              key={`${trail.id}-${alwaysOn}-${east}`}
+              direction={east ? "left" : "right"}
+              offset={east ? [-14, 0] : [14, 0]}
+              permanent={alwaysOn}
+              opacity={1}
+            >
+              <span className="font-medium">{trail.name}</span>
+              <span className="text-zinc-500">
+                {" "}
+                {"·"} {trail.lengthMiles} mi
+              </span>
+            </Tooltip>
+          </Marker>
+        );
+      })}
+    </>
+  );
 }
 
 export default function TrailMap({
@@ -122,23 +193,11 @@ export default function TrailMap({
         />
       )}
 
-      {trails.map((trail) => (
-        <Marker
-          key={trail.id}
-          position={[trail.lat, trail.lng]}
-          icon={pinFor(trail, trail.slug === selectedSlug)}
-          eventHandlers={{ click: () => onSelect(trail.slug) }}
-        >
-          {/*
-            From the map user story: "the length of all the trails will appear
-            over the name of the trail." A permanent tooltip does exactly that.
-          */}
-          <Tooltip direction="right" offset={[14, 0]} permanent opacity={1}>
-            <span className="font-medium">{trail.name}</span>
-            <span className="text-zinc-500"> {"·"} {trail.lengthMiles} mi</span>
-          </Tooltip>
-        </Marker>
-      ))}
+      <TrailMarkers
+        trails={trails}
+        selectedSlug={selectedSlug}
+        onSelect={onSelect}
+      />
     </MapContainer>
   );
 }

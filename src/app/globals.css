@@ -123,6 +123,10 @@
   border-right-color: rgba(255, 255, 255, 0.15);
 }
 
+.leaflet-container .leaflet-tooltip-left::before {
+  border-left-color: rgba(255, 255, 255, 0.15);
+}
+
 .leaflet-container {
   font-family: var(--font-body);
 }
