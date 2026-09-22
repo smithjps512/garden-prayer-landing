@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* neutral (home page) */
+  --brand: 17 24 39;
+  --brand-deep: 3 7 18;
+  --accent: 245 158 11;
+  --ink: 17 24 39;
+  --paper: 255 255 255;
+  --tint: 243 244 246;
+}
+
+[data-club="tsa"] {
+  --brand: 0 93 170;      /* TSA blue  #005DAA */
+  --brand-deep: 11 46 92; /* navy */
+  --accent: 238 49 36;    /* TSA red   #EE3124 */
+  --ink: 15 23 42;
+  --paper: 255 255 255;
+  --tint: 239 245 252;
+}
+
+[data-club="ffa"] {
+  --brand: 0 76 151;      /* National Blue #004C97 */
+  --brand-deep: 0 43 92;
+  --accent: 255 205 0;    /* Corn Gold #FFCD00 */
+  --ink: 15 23 42;
+  --paper: 255 255 255;
+  --tint: 255 250 230;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-brand-paper text-brand-ink font-body antialiased; }
+  h1, h2, h3 { @apply font-display tracking-tight; }
+  ::selection { background: rgb(var(--accent) / 0.35); }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition focus:outline-none focus-visible:ring-4; }
+  .btn-accent { @apply btn bg-brand-accent text-white shadow-lift hover:brightness-110 focus-visible:ring-brand-accent/40; }
+  .btn-light { @apply btn bg-white/95 text-brand-deep hover:bg-white focus-visible:ring-white/50; }
+  .btn-ghost { @apply btn border border-white/40 text-white hover:bg-white/10 focus-visible:ring-white/40; }
+  .btn-brand { @apply btn bg-brand text-white hover:bg-brand-deep focus-visible:ring-brand/40; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.18em]; }
+  .card { @apply rounded-2xl bg-white shadow-card ring-1 ring-black/5; }
+  .input { @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/15; }
+  .label { @apply mb-1.5 block text-sm font-semibold text-slate-700; }
+}
+
+[data-club="ffa"] .btn-accent { @apply text-ffa-navy; }
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%);
+}
+
+.hero-glow {
+  background: radial-gradient(60% 60% at 80% 20%, rgb(var(--accent) / 0.35), transparent 70%),
+              radial-gradient(50% 50% at 10% 90%, rgb(255 255 255 / 0.12), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise { animation: none; }
+}
