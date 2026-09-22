@@ -103,7 +103,7 @@ export const CLUBS: Record<ClubId, Club> = {
     advisorEmail: "seyre@mcps.org",
     room: "AG Room",
     meetingTimes: "Before/after school meetings for the leadership team; dates and times announced by email",
-    firstMeeting: `${FIRST_MEETING_DATE}`,
+    firstMeeting: "To be announced by email",
     what:
       "FFA is a dynamic youth organization that changes lives and prepares members for premier leadership, personal growth and career success through agricultural education.",
     membership:
